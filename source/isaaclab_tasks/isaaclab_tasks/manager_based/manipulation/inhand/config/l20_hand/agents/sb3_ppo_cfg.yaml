@@ -1,0 +1,35 @@
+# Copyright (c) 2022-2025, The Isaac Lab Project Developers (https://github.com/isaac-sim/IsaacLab/blob/main/CONTRIBUTORS.md).
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+# SB3 PPO Configuration for L20 Hand Cube Manipulation Task
+# Based on Stable Baselines3 best practices for robotic manipulation
+
+seed: 42
+
+# Total timesteps: approximately 10 million steps
+n_timesteps: 10000000
+
+policy: 'MlpPolicy'
+
+# Training hyperparameters
+n_steps: 512
+batch_size: 256
+gae_lambda: 0.95
+gamma: 0.99
+n_epochs: 10
+ent_coef: 0.001
+vf_coef: 0.5
+learning_rate: !!float 3e-4
+clip_range: 0.2
+
+# Neural network architecture
+# Larger networks for complex hand control with 16 DOF
+policy_kwargs: "dict(
+                  activation_fn=nn.ELU,
+                  net_arch=dict(pi=[512, 256, 128], vf=[512, 256, 128])
+                )"
+
+target_kl: 0.01
+max_grad_norm: 1.0
