@@ -61,7 +61,7 @@ LinkerHand 资产目录固定为：
 - `l20lite_no_mimic.usd`
 - `o6_hand.usd`
 
-当前仓库不包含这三份 USD，本仓库只保存代码侧补丁。***获取 USD 时，导入 URDF 需要选择 `ignore mimic`，然后保存为 flattened USD。***
+***获取 USD 时，导入 URDF 需要选择 `ignore mimic`，然后保存为 flattened USD。***
 
 如果只把这个仓库单独拉下来而不放进完整 IsaacLab，任务注册、训练脚本依赖和官方 workflow 入口都不会完整。
 
@@ -105,9 +105,7 @@ LinkerHand 资产目录固定为：
   - 已补齐任务注册和 agent 命名
   - 仍需要在完整 IsaacLab 中重新 smoke-test
 
-本仓库只提供 LinkerHand 在 IsaacLab `inhand` 任务下的代码侧适配补丁，不包含完整 IsaacLab、训练权重或手型 USD 资产（可以参考上面的方法），也不保证脱离完整 IsaacLab 工作区即可直接运行。
-
-本仓库内容仅供学术交流与研究参考使用。
+本仓库只提供 LinkerHand 在 IsaacLab `inhand` 任务下的代码侧适配补丁，不包含完整 IsaacLab、训练权重，本仓库内容仅供学术交流与研究参考使用。
 
 LinkerHand 相关公开参考仓库：
 
