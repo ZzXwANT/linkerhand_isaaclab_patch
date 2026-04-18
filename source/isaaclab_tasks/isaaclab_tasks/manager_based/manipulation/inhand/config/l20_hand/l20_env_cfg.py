@@ -82,6 +82,7 @@ class L20KinematicObsGroupCfg(ObsGroup):
 
 @configclass
 class L20ActionsCfg:
+    # 新的mimic处理
     joint_pos = mdp.LinkerMimicEMAJointPositionToLimitsActionCfg(
         asset_name="robot",
         joint_names=[".*"],

@@ -21,16 +21,14 @@
 - 将 `L20`、`L20Lite`、`O6` 的 USD 路径统一改为仓库内相对路径
 - 保留 `L20` 和 `L20Lite` 当前实验参数，并整理 `inhand` 下的配置结构
 - 补齐 `inhand` 与 `config` 的导入链，确保任务注册能自动触发
-- 修正 `O6` 相关 `agent` / `experiment_name` / 配置文件中的历史 `Allegro` 残留
-- 将 README 调整为项目介绍型首页，并预留两个 GIF/视频插槽
 
 ### Removed
 
 - 删除旧的试验性 core patch 文件：
+
   - `source/isaaclab/joint_actions_to_limits.py`
   - `source/isaaclab/joint_actions_to_limits_mimic.py`
   - `source/isaaclab/l20_mimic_driver.py`
-- 删除仓库内的 `__pycache__`
 
 ### Notes
 
